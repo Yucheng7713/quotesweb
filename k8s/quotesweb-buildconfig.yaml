@@ -1,0 +1,21 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: quotesweb-build
+  namespace: yuchstj824-dev
+spec:
+  source:
+    git:
+      ref: master
+      uri: 'https://github.com/Yucheng7713/quotesweb.git'
+    type: Git
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: './'
+  output:
+    to:
+      kind: ImageStreamTag
+      name: quotesweb:latest
+  triggers:
+    - type: "Github"
