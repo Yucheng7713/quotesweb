@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: quotes
-          image: quay.io/donschenck/quotesweb:v1
+          image: image-registry.openshift-image-registry.svc:5000/yuchstj824-dev/quotesweb:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
