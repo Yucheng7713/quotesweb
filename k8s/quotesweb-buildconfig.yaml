@@ -2,6 +2,8 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: quotesweb-build
+  labels:
+    app: quotesweb
   namespace: yuchstj824-dev
 spec:
   source:
